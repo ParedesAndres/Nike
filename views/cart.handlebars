@@ -61,6 +61,17 @@
 
                 <div class="summary-section__products">
                     <p class="summary-section__products__list"></p>
+                    {{#each boots}}
+                        <div class="summary-section__products__item">
+                            <img  class="summary-section__products__item__image" src="{{img}}" alt="">
+                            <div class="summary-section__products__item__info">
+                                <h3 class="summary-section__products__item__info__name">{{name}}</h3>
+                                <p class="summary-section__products__item__info__collection">Collection: {{collection}}</p>
+                                <p class="summary-section__products__item__info__color">Color: {{color}}</p>
+                                <p class="summary-section__products__item__info__price">Price: ${{price}}.00</p>
+                            </div>
+                        </div>
+                    {{/each}}
                 </div>
 
                 <button class="summary-section__button">MAKE A PAYMENT</button>
