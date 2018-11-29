@@ -17,14 +17,14 @@ const client = new MongoClient(url);
 var db;
 
 // Use connect method to connect to the Server
-client.connect(`mongodb+srv://nike-gwqbo.mongodb.net/list`, 
+MongoClient.connect(`mongodb+srv://nike-gwqbo.mongodb.net/list`, 
 {
     auth: {
         user: 'AndresParedes',
         password: '970326A.'
     }
 }, 
-function (err) {
+function (err, client) {
     assert.equal(null, err);
     console.log("Connected successfully to server");
 
