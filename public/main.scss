@@ -1,0 +1,13 @@
+@import '_variable';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import '_header';
+@import '_filter';
+@import '_list';
+@import '_product';
+@import '_payment';
