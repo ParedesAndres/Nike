@@ -17,7 +17,14 @@ const client = new MongoClient(url);
 var db;
 
 // Use connect method to connect to the Server
-client.connect(function (err) {
+client.connect(`mongodb+srv://AndresParedes:<PASSWORD>@nike-gwqbo.mongodb.net/test?retryWrites=true`, 
+{
+    auth: {
+        user: 'AndresParedes',
+        password: '970326A.'
+    }
+}, 
+function (err) {
     assert.equal(null, err);
     console.log("Connected successfully to server");
 
@@ -215,4 +222,4 @@ app.post('/api/addItemToCart', function(request, response){
     })
 });
 
-app.listen(5500);
+app.listen(process.env.PORT || 1234);
