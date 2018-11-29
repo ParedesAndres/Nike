@@ -17,7 +17,7 @@ const client = new MongoClient(url);
 var db;
 
 // Use connect method to connect to the Server
-client.connect(`mongodb+srv://AndresParedes:<PASSWORD>@nike-gwqbo.mongodb.net/list`, 
+client.connect(`mongodb+srv://nike-gwqbo.mongodb.net/list`, 
 {
     auth: {
         user: 'AndresParedes',
