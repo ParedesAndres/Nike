@@ -172,4 +172,8 @@ app.get('/cart', (req, res) => {
     res.render('cart');
 });
 
+app.get('/cr7', (req, res) => {
+    res.render('cr7');
+});
+
 app.listen(5500);

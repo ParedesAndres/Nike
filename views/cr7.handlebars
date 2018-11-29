@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Textures - A-Frame School</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+</head>
+<body>
+    
+    <a-scene id="canvas"  class="fullscreen">
+
+        <a-assets>
+            <video id="video" autoplay loop="true"
+ src="./video/cristiano.mp4" webkit-playsinline></video>
+        </a-assets>
+
+        <a-sky class="background" src="img/cr7.jpg" position="0 1 0" rotation="0 -115 0"></a-sky>
+
+        <a-box
+            width="2" height="3" depth="0.1"
+            position="0 1 5"
+        >
+            <a-text  value="Portugal" width="3" position="0 1 5"></a-text>
+        </a-box>
+        <a-video src="#video" width="16" height="9" position="0 1 -10"></a-video>
+
+        <a-camera position="0 1 0">
+                <a-cursor color="#FF0000"></a-cursor>
+        </a-camera>
+
+        
+    </a-scene>
+
+    <script>
+        var box = document.querySelector('a-box');
+        var background = document.querySelector('.background');
+        box.addEventListener( "mouseenter", function(){
+            background.setAttribute("src", "./img/bobby.png");
+        } );
+
+       
+    </script>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+</body>
+</html>
