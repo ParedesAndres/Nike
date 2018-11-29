@@ -17,7 +17,7 @@ const client = new MongoClient(url);
 var db;
 
 // Use connect method to connect to the Server
-client.connect(`mongodb+srv://AndresParedes:<PASSWORD>@nike-gwqbo.mongodb.net/test?retryWrites=true`, 
+client.connect(`mongodb+srv://AndresParedes:<PASSWORD>@nike-gwqbo.mongodb.net/list`, 
 {
     auth: {
         user: 'AndresParedes',
@@ -30,10 +30,9 @@ function (err) {
 
     db = client.db(dbName);
 
+    app.listen(process.env.PORT || 1234);
     //client.close();
 });
-
-
 
 app.use(express.static('public'));
 app.engine('handlebars', hbs());
@@ -222,4 +221,4 @@ app.post('/api/addItemToCart', function(request, response){
     })
 });
 
-app.listen(process.env.PORT || 1234);
+app.listen(5500);
