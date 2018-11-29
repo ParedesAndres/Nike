@@ -12,6 +12,8 @@
         <a-assets>
             <video id="video" autoplay loop="true"
  src="./video/cristiano.mp4" webkit-playsinline></video>
+
+            <img id="texture" src="img/texture.png" alt="">
         </a-assets>
 
         <a-sky class="background" src="img/cr7.jpg" position="0 1 0" rotation="0 -115 0"></a-sky>
@@ -19,6 +21,7 @@
         <a-box
             width="2" height="3" depth="0.1"
             position="0 1 5"
+            src="#texture"
         >
             <a-text  value="Portugal" width="3" position="0 1 5"></a-text>
         </a-box>
@@ -35,7 +38,7 @@
         var box = document.querySelector('a-box');
         var background = document.querySelector('.background');
         box.addEventListener( "mouseenter", function(){
-            background.setAttribute("src", "./img/bobby.png");
+            background.setAttribute("src", "./img/cr7parteDos.jpg");
         } );
 
        
