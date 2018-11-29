@@ -70,6 +70,34 @@
             }
         }
 
+        &__products {
+            width: 100%;
+
+            &__item {
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                border: 1px solid #828282;                
+                margin-bottom: 10px;
+                padding: 10px;
+
+                &__image {
+                    width: 25%;
+                    margin-right: 10px;
+                    padding: 10px;
+                }
+
+                &__info {
+                    font-family: trade-gothic-light;
+
+                    &__name {
+                        font-family: trade-gothic-bold;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+
         &__button {
             width: 100%;
             background-color: black;

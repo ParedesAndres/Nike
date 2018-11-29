@@ -561,6 +561,9 @@ body {
 }
 
 @media (max-width: 768px) {
+  .main-header__container__title {
+    font-size: 50px;
+  }
   .phrase {
     background-color: #000000;
     color: #ffffff;
@@ -594,6 +597,12 @@ body {
   }
   .second-description .second-description__container .second-description__container__info {
     color: #ffffff;
+  }
+}
+
+@media (min-width: 769px) {
+  .main-header__container__title {
+    font-size: 70px;
   }
 }
 /*# sourceMappingURL=main.css.map */

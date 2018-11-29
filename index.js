@@ -168,12 +168,51 @@ app.get('/store/:product', (req, res) => {
 });
 
 app.get('/cart', (req, res) => {
-
-    res.render('cart');
+    const CartCollection = db.collection('cart');
+    CartCollection.find({}).toArray(function(err, docs){
+        if(err) {
+            console.error(err);
+            response.send(err);
+            return;
+        }
+        var context = {
+            boots: docs,
+        }
+        res.render('cart', context);
+    });
 });
 
 app.get('/cr7', (req, res) => {
     res.render('cr7');
+});
+
+////////// RUTAS POST //////////
+
+app.post('/api/addItemToCart', function(request, response){
+    const productsCollection = db.collection('products');
+    const CartCollection = db.collection('cart');
+    let nameItem = request.body.name;
+
+    productsCollection.find({
+        name: {
+            '$eq': nameItem
+        }
+    }).toArray(function(error, docs){
+        if(error) {
+            console.error(error);
+            response.send(error);
+            return;
+        }
+
+        CartCollection.insert(docs[0], function(error2, result) {
+            if(error2) {
+                console.error(error2);
+                response.send(error2);
+                return;
+            }
+            response.send("Item added");
+        });
+    })
 });
 
 app.listen(5500);
