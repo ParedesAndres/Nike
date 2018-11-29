@@ -1,5 +1,9 @@
 @media (max-width: 768px) {
 
+    .main-header__container__title{
+        font-size: 50px;
+    }
+
     .phrase{
         background-color: $color-primary;
         color: $color-secondary;
@@ -43,3 +47,9 @@
         }
     }
 }
+
+@media (min-width: 769px) {
+    .main-header__container__title{
+        font-size: 70px;
+    }
+  }
